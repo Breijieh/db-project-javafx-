@@ -1,0 +1,205 @@
+.root {
+    -fx-bg-primary-color: #161925;
+    -fx-bg-secondary-color: #24293c;
+    -fx-headers-color: #f9f9fa;
+    -fx-borders-color: #DEE5F0;
+    -fx-primary-color: #2954ED;
+    -fx-caption-color: #6d7380;
+    -fx-selected-text-color: #1A73E8;
+    -fx-unselected-text-color: #6d7380;
+    -fx-hover-color: #0F5BB5;
+    -fx-pressed-color: #0A4A93;
+}
+
+.primary-bg {
+    -fx-background-color: -fx-bg-primary-color;
+}
+
+.secondary-bg {
+    -fx-background-color: -fx-bg-secondary-color;
+}
+
+.border {
+    -fx-border-color: transparent #202d3f transparent transparent;
+    -fx-border-width: 0 3 0 0;
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+}
+
+.border-header {
+    -fx-border-color: transparent transparent #202d3f transparent;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+}
+
+.menu-item-label {
+    -fx-text-fill: #565f70;
+}
+
+/* CustomButton */
+.custom-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.custom-button:hover {
+    -fx-background-color: -fx-hover-color;
+}
+
+.custom-button:pressed {
+    -fx-background-color: -fx-pressed-color;
+}
+
+/* __CustomButton__ */
+
+/* ThemeToggle  */
+.theme-toggle-label {
+    -fx-text-fill: -fx-unselected-text-color;
+}
+
+.theme-toggle-label.selected {
+    -fx-text-fill: -fx-selected-text-color;
+}
+
+.theme-toggle {
+    -fx-background-color: -fx-bg-secondary-color;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 4);
+}
+
+.theme-toggle-label {
+    -fx-background-color: -fx-bg-primary-color;
+    -fx-text-fill: #cccccc;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0, 0, 2);
+}
+
+.theme-toggle-label:hover {
+    -fx-background-color: #161925c9;
+}
+
+.theme-toggle-label.selected {
+    -fx-background-color: #1A73E8;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
+}
+
+/* __ThemeToggle__  */
+
+/* Input & SearchBox  */
+.text-field {
+    -fx-background-color: -fx-bg-primary-color;
+    -fx-border-color: -fx-bg-primary-color;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-caption-color;
+    -fx-effect: dropshadow(gaussian, rgba(23, 36, 48, 0.2), 20, 0, 0, 8);
+
+}
+
+.text-field:focused {
+    -fx-border-color: #2954ED;
+}
+
+.text-field .text {
+    -fx-fill: -fx-caption-color;
+}
+
+/* __Input & SearchBox  __*/
+
+/* SectionTitle  */
+.section-title {
+    -fx-text-fill: -fx-headers-color;
+}
+
+/*__ SectionTitle  __*/
+
+/* StyledTableComponent  */
+.table-container {
+    -fx-background-color: -fx-bg-primary-color;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+
+.table-view {
+    -fx-background-color: -fx-bg-secondary-color;
+    /* -fx-border-color: transparent; */
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    /* -fx-table-cell-border-color: #f0f0f0; */
+    -fx-padding: 10;
+    -fx-font-family: "Poppins";
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-bg-secondary-color;
+}
+
+.table-view .column-header,
+.table-view .table-column {
+    /* -fx-border-color: transparent; */
+    -fx-font-weight: bold;
+    -fx-text-fill: #888888;
+    -fx-background-color: -fx-bg-primary-color;
+    -fx-font-size: 14px;
+}
+
+.table-view .table-cell {
+    -fx-padding: 8px;
+    -fx-alignment: center;
+    -fx-text-fill: -fx-caption-color;
+    -fx-background-color: -fx-bg-secondary-color;
+    -fx-font-size: 14px;
+}
+
+.table-view .table-cell:selected {
+    -fx-background-color: #E8F0FE;
+    -fx-text-fill: #1E88E5;
+}
+
+.table-view .column-header .label {
+    -fx-alignment: center;
+    -fx-text-fill: -fx-caption-color;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-bg-secondary-color;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.table-view .column-header {
+    -fx-padding: 8px;
+}
+
+/*__ StyledTableComponent  __*/
+
+/* TitleView  */
+.view-title {
+    -fx-text-fill: -fx-headers-color;
+}
+
+.view-subtitle {
+    -fx-text-fill: -fx-caption-color;
+}
+
+/*__ TitleView  __*/
+
+/* LoadingScreen  */
+.loading-screen {
+    -fx-background-color: -fx-bg-primary-color;
+}
+
+/*__ LoadingScreen  __*/
+
+/* ServiceCard  */
+.service-card {
+    -fx-background-color: -fx-bg-secondary-color;
+}
+
+/*__ ServiceCard  __*/

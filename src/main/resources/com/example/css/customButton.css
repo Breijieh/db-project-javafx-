@@ -1,0 +1,28 @@
+.custom-button {
+    -fx-background-color: #2954ED;
+}
+.custom-button:hover {
+    -fx-background-color: #0056b3;
+}
+.custom-button:pressed {
+    -fx-background-color: #004085;
+}
+.custom-button.outlined:hover {
+    -fx-background-color: rgba(0, 123, 255, 0.1);
+}
+.custom-button.outlined:pressed {
+    -fx-background-color: rgba(0, 123, 255, 0.2);
+}
+.custom-button.outlined:hover {
+    -fx-background-color: rgba(0, 123, 255, 0.1);
+}
+.custom-button.outlined {
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-background-color: transparent;
+    -fx-border-color: #007bff;
+    -fx-border-width: 1px;
+}
+.custom-button.outlined:pressed {
+    -fx-background-color: rgba(0, 123, 255, 0.2);
+}

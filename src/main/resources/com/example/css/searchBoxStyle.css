@@ -1,0 +1,18 @@
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 14px;
+    -fx-text-fill: #171926;
+}
+
+.text-field:focused {
+    -fx-border-color: #2954ED;
+}
+
+.text-field .text {
+    -fx-fill: #171926;
+}
