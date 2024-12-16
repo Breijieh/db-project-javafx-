@@ -1,8 +1,6 @@
 package com.example.controller;
 
-import com.example.components.general.CustomButton;
 import com.example.components.general.CustomSearchBox;
-import com.example.components.general.SectionTitle;
 import com.example.components.dialog.FieldDefinition;
 import com.example.components.dialog.MessageDialog;
 import com.example.components.dialog.DetailsDialog;
@@ -200,6 +198,7 @@ public class CarController {
         return filteredCarList;
     }
 
+    // ----------------------------Searching---------------------------------------------
     public void filterCars(List<CustomSearchBox> searchBoxes) {
         filteredCarList.setPredicate(car -> {
             for (CustomSearchBox searchBox : searchBoxes) {
@@ -227,18 +226,7 @@ public class CarController {
         });
     }
 
-    private boolean isInputValid(String dataType, String input) {
-        switch (dataType) {
-            case "INT":
-                return isIntInputValid(input);
-            case "DOUBLE":
-            case "DECIMAL":
-                return isDoubleInputValid(input);
-            default:
-                return true;
-        }
-    }
-
+    // helper method for filterCars
     private boolean applyFilter(String dataType, String input, String fieldValue) {
         switch (dataType) {
             case "INT":
@@ -251,10 +239,12 @@ public class CarController {
         }
     }
 
+    // helper method for filterCars
     private boolean fuzzyMatch(String fieldValue, String input) {
         return FuzzySearch.ratio(fieldValue.toLowerCase(), input.toLowerCase()) >= 60;
     }
 
+    // validating the int
     private boolean safeFilterInt(String input, String fieldValue) {
         try {
             int actualValue = Integer.parseInt(fieldValue);
@@ -265,6 +255,7 @@ public class CarController {
         }
     }
 
+    // validating the decimal
     private boolean safeFilterDecimal(String input, String fieldValue) {
         try {
             double actualValue = Double.parseDouble(fieldValue);
@@ -311,6 +302,19 @@ public class CarController {
         }
         double exactValue = Double.parseDouble(input.trim());
         return actualValue == exactValue;
+    }
+
+    // ---------validating the input----------------
+    private boolean isInputValid(String dataType, String input) {
+        switch (dataType) {
+            case "INT":
+                return isIntInputValid(input);
+            case "DOUBLE":
+            case "DECIMAL":
+                return isDoubleInputValid(input);
+            default:
+                return true;
+        }
     }
 
     private boolean isIntInputValid(String input) {
@@ -378,6 +382,8 @@ public class CarController {
             return false;
         }
     }
+    // ---------validating the input----------------
+    // ----------------------------__Searching__---------------------------------------------
 
     public void handleDetails(Car car) {
         try {
@@ -392,6 +398,8 @@ public class CarController {
         }
     }
 
+    // helper for handelDetails create table and show
+    @SuppressWarnings("unchecked")
     private void showCarServicesDetails(Car car, List<CarServiceRecord> services) {
 
         DetailsDialog detailsDialog = AppStage.getInstance().getDetailsDialog();
